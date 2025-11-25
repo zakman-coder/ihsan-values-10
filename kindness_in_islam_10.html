@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ihsan Project: Pinnacle of Excellence (Muhammad Zakwan) - Advanced</title>
+
+  <link rel="manifest" href="/manifest.json">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .section { padding-top: 6rem; padding-bottom: 6rem; }
+
+    /* New Advanced Color Palette: Sapphire Blue (Primary) and Gold (Accent) */
+    .bg-primary { background-color: #1e3a8a; } /* Blue 800 (Deep Sapphire) */
+    .bg-primary-dark { background-color: #1e40af; } /* Blue 700 */
+    .text-primary { color: #1e3a8a; }
+    .border-primary { border-color: #1e3a8a; }
+    .bg-accent { background-color: #d97706; } /* Amber 700 (Deep Gold/Ochre) */
+    .text-accent { color: #d97706; }
+    
+    /* Dynamic Geometric Divider with Sapphire/Gold */
+    .geometric-divider { 
+        height: 8px; 
+        background: repeating-linear-gradient(45deg, #1e3a8a, #1e3a8a 15px, #d97706 15px, #d97706 30px); 
+        border-radius: 9999px; 
+        margin: 6rem auto; 
+        width: 90%; 
+        max-width: 1000px; 
+        opacity: 0.9; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .utility-bar { top: 1.5rem; right: 1.5rem; }
+    
+    /* Advanced Hover Effects */
+    .btn { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; }
+    .btn:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); }
+
+    /* Dark mode adjustments */
+    .dark .bg-gray-50 { background-color: #0f172a; } 
+    .dark .bg-white { background-color: #1f2937; }
+    .dark .text-gray-800 { color: #f3f4f6; }
+
+    /* Input focus (Sapphire glow) */
+    input:focus, textarea:focus { outline: none; box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.4); border-color: #1e3a8a; }
+    
+    /* ADVANCED: Spinner style for dynamic loading */
+    .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #1e3a8a; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; display: none; margin: 0 auto; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased transition-colors duration-500">
+
+  <div class="fixed utility-bar z-50 flex flex-col space-y-3">
+      <button id="storageToggle" class="bg-blue-500 text-white p-3 rounded-full shadow-xl hover:bg-blue-600 btn transition-transform duration-300" aria-label="Toggle Offline Storage">💾</button>
+
+      <button id="darkToggle" class="bg-primary text-white p-3 rounded-full shadow-xl hover:bg-primary-dark btn transition-transform duration-300" aria-label="Toggle Dark Mode">🌙</button>
+  </div>
+
+  <a href="#home" class="fixed bottom-6 left-6 z-50 bg-gray-800 text-white p-3 rounded-full shadow-xl hover:bg-gray-700 btn transition-transform duration-300" aria-label="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg>
+  </a>
+
+  <header class="bg-white dark:bg-gray-900 shadow-xl sticky top-0 left-0 w-full z-40 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="flex items-center space-x-3 group" aria-label="Ihsan Project Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-12 transition-transform duration-300">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <h1 class="text-2xl font-black text-primary dark:text-blue-400">Ihsan Project <span class="text-sm font-normal text-gray-500 dark:text-gray-400">by Muhammad Zakwan</span></h1>
+      </a>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="#home" class="hover:text-primary dark:hover:text-blue-400 btn">Home</a>
+        <a href="#about" class="hover:text-primary dark:hover:text-blue-400 btn">About</a>
+        <a href="#core" class="hover:text-primary dark:hover:text-blue-400 btn">Concepts</a>
+        <a href="#typology" class="hover:text-primary dark:hover:text-blue-400 btn">Typology</a>
+        <a href="#muhasaba" class="hover:text-primary dark:hover:text-blue-400 btn">Muḥā́saba</a>
+        <a href="#resources" class="hover:text-primary dark:hover:text-blue-400 btn">Resources</a>
+        <a href="#contact" class="hover:text-primary dark:hover:text-blue-400 btn">Contact</a>
+      </nav>
+      </div>
+  </header>
+
+  <section id="home" class="section pt-32 pb-24 px-4 text-center bg-gradient-to-br from-primary to-primary-dark dark:from-gray-900 dark:to-gray-950 text-white shadow-2xl" data-aos="fade-in-down">
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Ihsan: The Pinnacle of Spiritual Excellence</h2>
+    <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-95 mb-10">**Muhammad Zakwan** presents the path to sincere, God-conscious moral perfection in every endeavor.</p>
+    <a href="#muhasaba" class="bg-accent text-primary py-3 px-10 rounded-full font-bold text-lg shadow-2xl hover:bg-amber-600 btn">Start Your Self-Assessment Today</a>
+  </section>
+
+  <section id="about" class="section max-w-5xl mx-auto px-6" data-aos="fade-up">
+    <span class="text-sm font-semibold text-primary uppercase block text-center">Foundational Theology</span>
+    <h3 class="text-4xl font-bold text-center mb-6">Defining the Muqā́m al-Iḥsān (Station of Excellence) 🕋</h3>
+    <p class="text-lg mb-4 leading-relaxed">**Ihsan (إحسان)** represents the highest spiritual station (**Muqām**), where the believer transcends mere obedience (**Islam**) and internal conviction (**Iman**) to perform all actions with **beauty and excellence (Husn)**. This level of conduct is achieved by constantly maintaining **God-Consciousness**, the state described in the *Hadith of Jibril*.</p>
+    <p class="text-lg mb-4 leading-relaxed">For **Muhammad Zakwan**'s project, Ihsan is the practical philosophy that demands **quality** in worship, professional life, social interactions, and environmental stewardship. It moves a person from *doing good* to *doing good perfectly*, reflecting the beautiful names and attributes of the Creator in their own conduct. This level of **moral aesthetics** is what distinguishes true spiritual depth.</p>
+    <div class="bg-accent/10 dark:bg-gray-800 border-l-4 border-accent dark:border-amber-400 p-4 rounded-md font-semibold text-gray-700 dark:text-gray-300 shadow-md" role="alert" aria-live="polite">
+      <p class="italic">“Ihsan is to worship Allah as if you see Him, for if you don't see Him, surely He sees you.”</p>
+      <p class="text-sm mt-1 text-right">— The defining statement of Ihsan from the **Hadith of Jibril**</p>
+    </div>
+  </section>
+
+  <div class="geometric-divider"></div>
+
+  <section id="core" class="section bg-gray-100 dark:bg-gray-900" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <span class="text-sm font-semibold text-center block text-primary uppercase">The Tripartite Framework</span>
+      <h3 class="text-4xl font-bold text-center mb-10">The Advanced Pillars of Excellence 💎</h3>
+      <p class="text-center text-lg max-w-4xl mx-auto mb-12 dark:text-gray-300">Ihsan is structurally applied through three essential ethical lenses, ensuring comprehensive moral oversight in life.</p>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-primary hover:shadow-2xl transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="100">
+          <h4 class="text-2xl font-bold mb-3 text-primary">Sincerity (Ikhlās)</h4>
+          <p class="text-sm">The internal pillar. Ihsan demands absolute purity of **intention (Niyyah)**, meaning the deed is performed solely for the sake of Allah, free from **showing off (Riyā)** or seeking praise. This eliminates self-interest and anchors the action in divine purpose.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-accent hover:shadow-2xl transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="300">
+          <h4 class="text-2xl font-bold mb-3 text-accent">Perfection (Itqān)</h4>
+          <p class="text-sm">The technical pillar. This involves striving for the highest **quality and precision** in all actions, whether building a bridge, studying a subject, or fulfilling a spiritual duty. Itqān ensures that the final product of the effort is worthy of the divine witness.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-teal-500 hover:shadow-2xl transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="500">
+          <h4 class="text-2xl font-bold mb-3 text-teal-600">Beneficence (Manfa'a)</h4>
+          <p class="text-sm">The social pillar. This means ensuring your action not only avoids harm but actively creates **maximum benefit** and positive impact for others and the community. This aligns with the Hadith: "The best of people are those who are most beneficial to people."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="geometric-divider"></div>
+
+  <section id="typology" class="section max-w-6xl mx-auto px-6" data-aos="fade-up">
+    <span class="text-sm font-semibold text-center block text-primary uppercase">Metaphysical Structure</span>
+    <h3 class="text-4xl font-bold text-center mb-10">Deen as a System: Islam, Iman, Ihsan ⚛️</h3>
+    <p class="text-lg max-w-4xl mx-auto text-center mb-8 dark:text-gray-300">This three-tiered structure represents the complete spiritual system (**Deen**). Ihsan provides the **vector** and the **qualitative metric** for the other two dimensions.  The guidance from **Muhammad Zakwan** focuses on integrating these three dimensions into a coherent spiritual path.</p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-blue-500" data-aos="fade-right">
+            <h4 class="text-2xl font-bold mb-3 text-blue-600">Islam (The Body)</h4>
+            <p class="text-md dark:text-gray-300">The domain of **Jurisprudence (Fiqh)**. Focuses on the outward, demonstrable acts and duties. *What* is done.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-amber-500" data-aos="fade-left">
+            <h4 class="text-2xl font-bold mb-3 text-amber-600">Iman (The Heart)</h4>
+            <p class="text-md dark:text-gray-300">The domain of **Theology (Aqīdah)**. Focuses on the unseen beliefs and conviction. *Why* it is done.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 md:col-span-2 p-6 rounded-xl shadow-lg border-l-4 border-primary" data-aos="zoom-in">
+            <h4 class="text-2xl font-bold mb-3 text-primary">Ihsan (The Spirit / Quality)</h4>
+            <p class="text-md dark:text-gray-300">The domain of **Spiritual Science (Tasawwuf)**. Focuses on the level of presence and perfection in the act. *How well* and *how consciously* it is done. It perfects the sincerity of Iman and the form of Islam.</p>
+        </div>
+    </div>
+  </section>
+
+  <div class="geometric-divider"></div>
+
+  <section id="muhasaba" class="section max-w-6xl mx-auto px-6 bg-yellow-50 dark:bg-gray-800/50" data-aos="fade-up">
+    <span class="text-sm font-semibold text-accent uppercase block text-center">Applied Ethics</span>
+    <h3 class="text-4xl font-bold text-center mb-10">Muḥā́saba: The Self-Accountability Matrix 📋</h3>
+    <p class="text-lg max-w-4xl mx-auto text-center mb-12 dark:text-gray-300">Ihsan requires constant introspection. This tool, guided by the principles of **Muhammad Zakwan**, provides a conceptual framework for daily self-assessment to ensure all actions meet the standard of excellence.</p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-xl border-t-4 border-primary" data-aos="flip-up" data-aos-delay="100">
+        <h4 class="text-xl font-bold mb-3 text-primary">Worship Quality (Ikhlās & Itqān)</h4>
+        <div class="space-y-4" id="worship-tracker">
+            <label class="flex items-center space-x-2 dark:text-gray-300 cursor-pointer">
+                <input type="checkbox" class="form-checkbox text-primary w-5 h-5" id="salat-check">
+                <span>**Salat:** Did I pray as if I saw Allah? (Presence of mind)</span>
+            </label>
+            <label class="flex items-center space-x-2 dark:text-gray-300 cursor-pointer">
+                <input type="checkbox" class="form-checkbox text-primary w-5 h-5" id="zakat-check">
+                <span>**Zakat:** Was the charity given with the best of my lawful earnings? (Quality of giving)</span>
+            </label>
+            <div class="mt-4 text-center">
+                <p id="worship-score" class="text-lg font-bold text-gray-700 dark:text-gray-200">Worship Score: 0/2</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-xl border-t-4 border-accent" data-aos="flip-up" data-aos-delay="300">
+        <h4 class="text-xl font-bold mb-3 text-accent">Interpersonal Conduct (Manfa'a & Rahma)</h4>
+        <div class="space-y-4">
+            <p class="text-sm dark:text-gray-300">**Action Log:** Submit a reflective journal entry for deep ethical analysis:</p>
+            <textarea id="reflection-input" rows="3" class="w-full p-2 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Reflect on a challenging interaction today..."></textarea>
+            <button id="submit-reflection" class="w-full bg-accent text-white py-2 rounded-lg font-bold hover:bg-amber-600 btn text-sm">Analyze Reflection (Serverless API)</button>
+            <div id="analysis-output" class="text-sm mt-2 p-2 bg-gray-50 dark:bg-gray-700 rounded text-gray-700 dark:text-gray-300 hidden">
+              <span class="font-semibold">Analysis:</span> <span id="analysis-text"></span>
+              <div class="spinner" id="analysis-spinner"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="geometric-divider"></div>
+
+  <section id="resources" class="section max-w-6xl mx-auto px-6" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <span class="text-sm font-semibold text-center block text-primary uppercase">Digital Repository</span>
+      <h3 class="text-4xl font-bold text-center mb-10">Ihsan Library: Deep Dive Archives 📚</h3>
+      <p class="text-center text-lg max-w-4xl mx-auto mb-12 dark:text-gray-300">Our repository is now using **Dynamic Content Loading** to fetch the latest resources for a faster initial load. Click to load the full list.</p>
+      
+      <div id="resource-container" class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-3 text-center">
+          <button id="load-resources-btn" class="bg-primary text-white py-3 px-8 rounded-full font-bold shadow-lg hover:bg-primary-dark btn">Load Scholarly Resources (AJAX)</button>
+          <div class="spinner mt-4" id="resource-spinner"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="geometric-divider"></div>
+
+  <section id="reminders" class="section bg-gray-100 dark:bg-gray-900" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <span class="text-sm font-semibold text-center block text-primary uppercase">Dynamic Wisdom Filter</span>
+      <h3 class="text-4xl font-bold text-center mb-10">Hadith/Ayat Search & Categorized Reminders 🔍</h3>
+
+      <div class="max-w-xl mx-auto mb-8" data-aos="zoom-in">
+        <label for="searchInput" class="block text-lg font-medium mb-2 text-gray-700 dark:text-gray-200">Search by Theme (Rahma, Justice, Worship):</label>
+        <input type="search" id="searchInput" placeholder="e.g., 'mercy', 'adl', 'parents'" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-primary transition-all dark:bg-gray-700 dark:border-gray-600 dark:text-white" role="searchbox" aria-label="Search Hadith and Quranic Verses" />
+      </div>
+
+      <ul id="searchResults" class="grid md:grid-cols-2 gap-6 list-none p-0" role="list">
+        <li class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-accent" data-theme="Rahma Social" data-aos="fade-up" data-aos-delay="100" role="listitem">
+          <p class="font-bold text-accent dark:text-amber-400">“Your smiling in the face of your brother is charity.”</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">— Tirmidhi (Theme: **Rahma**)</p>
+        </li>
+        <li class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-primary" data-theme="Justice Law Adl" data-aos="fade-up" data-aos-delay="200" role="listitem">
+          <p class="font-bold text-primary dark:text-blue-400">“Indeed, Allah commands justice and Ihsan...”</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">— Qur'an 16:90 (Theme: **Justice**)</p>
+        </li>
+        <li class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-teal-500" data-theme="Worship Itqān Taharah" data-aos="fade-up" data-aos-delay="300" role="listitem">
+          <p class="font-bold text-teal-600 dark:text-teal-400">"When one of you performs ablution, let him perfect it."</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">— Muslim (Theme: **Itqān/Worship**)</p>
+        </li>
+        <li class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-red-500" data-theme="Rahma Earth Animals" data-aos="fade-up" data-aos-delay="400" role="listitem">
+          <p class="font-bold text-red-600 dark:text-red-400">"Show mercy to those on earth and the One in the heaven will show mercy to you."</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">— Tirmidhi (Theme: **Rahma**)</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="geometric-divider"></div>
+
+  <section id="contact" class="section max-w-5xl mx-auto px-6" data-aos="fade-up">
+    <span class="text-sm font-semibold text-center block text-primary uppercase">Engagement Portal</span>
+    <h3 class="text-4xl font-bold text-center mb-10">Direct Contact: Muhammad Zakwan & The Team 📞</h3>
+    <p class="text-center text-lg max-w-3xl mx-auto mb-8 dark:text-gray-300">For academic collaborations, research queries, or advanced ethical consultation, please use the portal below. We strive for Ihsan in our communication response time.</p>
+    <form class="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl" id="contact-form" aria-labelledby="contact-heading">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1">Name</label>
+          <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your Name" aria-required="true" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1">Email</label>
+          <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your Email" aria-required="true" />
+        </div>
+      </div>
+      <div>
+        <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+        <input type="text" id="subject" name="subject" required class="w-full p-3 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Advanced Query Type" aria-required="true" />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium mb-1">Detailed Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your detailed request here..." aria-required="true"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-primary-dark btn shadow-md" id="submit-contact">Submit Advanced Query</button>
+      <div id="contact-status" class="mt-3 text-center text-sm font-semibold hidden" aria-live="assertive"></div>
+    </form>
+  </section>
+
+  <footer class="bg-gray-800 dark:bg-gray-900 text-white text-center py-8 mt-16 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-4">
+        <a href="#about" class="hover:text-blue-400">Theology</a>
+        <a href="#muhasaba" class="hover:text-blue-400">Accountability</a>
+        <a href="#resources" class="hover:text-blue-400">Scholarly Archives</a>
+        <a href="mailto:info@ihsanproject.org" class="hover:text-blue-400">Project Email</a>
+      </div>
+      <p class="text-sm border-t border-gray-700 pt-4">&copy; 2025 Ihsan Project. Developed by **Muhammad Zakwan**. PWA Ready.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // 1. AOS animations Initialization
+    AOS.init({ 
+      duration: 1000, 
+      once: true,
+      easing: 'ease-in-out'
+    });
+
+    // 2. Dark mode toggle and persistence
+    const darkToggle = document.getElementById('darkToggle');
+    const htmlEl = document.documentElement;
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        htmlEl.classList.add('dark');
+        localStorage.theme = 'dark';
+        darkToggle.textContent = '☀️';
+      } else {
+        htmlEl.classList.remove('dark');
+        localStorage.theme = 'light';
+        darkToggle.textContent = '🌙';
+      }
+    }
+
+    // Initialize theme from localStorage or system preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+
+    // Toggle event listener
+    darkToggle.addEventListener('click', () => {
+      const newTheme = htmlEl.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+    
+    // 3. PWA Readiness / Conceptual Storage
+    const storageToggle = document.getElementById('storageToggle');
+    storageToggle.addEventListener('click', () => {
+      alert("PWA Status: Conceptual Service Worker installed. Resources are being cached for the fastest, most reliable offline experience (Ihsan in Delivery).");
+    });
+
+    // 4. Dynamic Content Filter (Search Feature) - Enhanced to use data-theme
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    
+    if(searchInput && searchResults){
+      const items = Array.from(searchResults.getElementsByTagName('li'));
+      
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+        items.forEach(item => { 
+          // Search both text content and the data-theme attribute
+          const textMatch = item.textContent.toLowerCase().includes(query);
+          const themeMatch = item.getAttribute('data-theme')?.toLowerCase().includes(query);
+          
+          item.style.display = (textMatch || themeMatch) ? 'list-item' : 'none'; 
+        });
+      });
+    }
+
+    // 5. ADVANCED: Reactive UI Component (Worship Tracker)
+    const salatCheck = document.getElementById('salat-check');
+    const zakatCheck = document.getElementById('zakat-check');
+    const worshipScore = document.getElementById('worship-score');
+
+    function updateWorshipScore() {
+        let score = 0;
+        const total = 2;
+        if (salatCheck.checked) score++;
+        if (zakatCheck.checked) score++;
+        worshipScore.textContent = `Worship Score: ${score}/${total}`;
+        
+        // Provide feedback based on score
+        if (score === total) {
+            worshipScore.classList.remove('text-gray-700', 'dark:text-gray-200', 'text-red-500');
+            worshipScore.classList.add('text-primary');
+            worshipScore.textContent += " (Excellence Achieved!)";
+        } else if (score === 0) {
+            worshipScore.classList.remove('text-primary');
+            worshipScore.classList.add('text-red-500');
+        } else {
+            worshipScore.classList.remove('text-primary', 'text-red-500');
+            worshipScore.classList.add('text-gray-700', 'dark:text-gray-200');
+        }
+    }
+
+    if (salatCheck && zakatCheck) {
+        salatCheck.addEventListener('change', updateWorshipScore);
+        zakatCheck.addEventListener('change', updateWorshipScore);
+        updateWorshipScore(); // Initial run
+    }
+
+    // 6. ADVANCED: Conceptual Serverless Function Integration (Reflection Analysis)
+    const submitReflection = document.getElementById('submit-reflection');
+    const reflectionInput = document.getElementById('reflection-input');
+    const analysisOutput = document.getElementById('analysis-output');
+    const analysisText = document.getElementById('analysis-text');
+    const analysisSpinner = document.getElementById('analysis-spinner');
+
+    submitReflection.addEventListener('click', () => {
+        const reflection = reflectionInput.value.trim();
+        if (reflection.length < 20) {
+            alert("Please write a more detailed reflection (min. 20 characters) for analysis.");
+            return;
+        }
+
+        // 1. Show loading state
+        submitReflection.disabled = true;
+        analysisOutput.classList.remove('hidden');
+        analysisText.textContent = 'Contacting Ethical Analysis Endpoint...';
+        analysisSpinner.style.display = 'block';
+
+        // 2. Simulate API Call (Conceptual Lambda/Azure Function/Firebase Cloud Function)
+        setTimeout(() => {
+            analysisSpinner.style.display = 'none';
+            submitReflection.disabled = false;
+            
+            // Basic Simulated Sentiment/Theme Analysis
+            let result = "Review complete. Focus on 'Rahma' (Mercy) in difficult situations. Ihsan calls for patience with those who challenge you.";
+            if (reflection.toLowerCase().includes('parent') || reflection.toLowerCase().includes('mother') || reflection.toLowerCase().includes('father')) {
+                result = "Review complete. Reflection strongly aligns with Ihsan towards family. Ensure your inner state matches your outward service (Ikhlās).";
+            } else if (reflection.toLowerCase().includes('work') || reflection.toLowerCase().includes('boss') || reflection.toLowerCase().includes('client')) {
+                result = "Review complete. Focus on 'Itqān' (Perfection) in your professional work. Your commitment to quality reflects your commitment to Ihsan.";
+            }
+
+            // 3. Display Result
+            analysisText.textContent = result;
+
+        }, 2000); // 2-second simulation delay
+    });
+
+
+    // 7. ADVANCED: Dynamic Content Loading (Resources Section)
+    const loadResourcesBtn = document.getElementById('load-resources-btn');
+    const resourceContainer = document.getElementById('resource-container');
+    const resourceSpinner = document.getElementById('resource-spinner');
+
+    const dynamicResources = [
+        { title: "Advanced Fiqh: The Ihsan of Transaction", desc: "Monograph on Islamic finance ethics and surpassing kindness in contracts.", type: "PDF", color: "border-primary", delay: 100 },
+        { title: "The Aesthetics of Worship", desc: "A philosophical exploration of beauty (Jamāl) in ritual practice.", type: "E-Book", color: "border-accent", delay: 200 },
+        { title: "Spiritual Disciplines of Muhammad Zakwan", desc: "An interview series on practical daily Muḥā́saba techniques.", type: "Video", color: "border-teal-500", delay: 300 }
+    ];
+
+    function renderResource(resource) {
+        return `
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 ${resource.color} hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="${resource.delay}">
+                <h4 class="text-xl font-bold mb-2">${resource.title} (${resource.type})</h4>
+                <p class="text-sm dark:text-gray-300">${resource.desc}</p>
+                <button class="mt-3 text-sm font-semibold text-primary hover:underline">Download / Cache</button>
+            </div>
+        `;
+    }
+
+    loadResourcesBtn.addEventListener('click', () => {
+        loadResourcesBtn.disabled = true;
+        resourceSpinner.style.display = 'block';
+        
+        // Simulate network fetch
+        setTimeout(() => {
+            resourceSpinner.style.display = 'none';
+            loadResourcesBtn.remove(); // Remove the button after loading
+            
+            const html = dynamicResources.map(renderResource).join('');
+            resourceContainer.innerHTML = html;
+            AOS.refresh(); // Tell AOS to check for new elements
+        }, 1500); // 1.5 second loading delay
+    });
+
+    // 8. ADVANCED: Form Submission Handling (Preventing hard refresh)
+    const contactForm = document.getElementById('contact-form');
+    const contactStatus = document.getElementById('contact-status');
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop the default form submission
+        
+        const submitButton = document.getElementById('submit-contact');
+        submitButton.disabled = true;
+        contactStatus.classList.remove('hidden', 'text-primary', 'text-red-500');
+        contactStatus.classList.add('text-accent');
+        contactStatus.textContent = 'Sending message with Ihsan...';
+
+        // Simulate successful AJAX submission to a backend endpoint
+        setTimeout(() => {
+            submitButton.disabled = false;
+            contactStatus.classList.remove('text-accent');
+            contactStatus.classList.add('text-primary');
+            contactStatus.textContent = 'Success! Your query was submitted. Muhammad Zakwan will ensure a reply with the highest degree of Ihsan.';
+            contactForm.reset(); // Clear the form
+        }, 3000);
+    });
+  </script>
+</body>
+</html>
